@@ -22,12 +22,58 @@ const Header: React.FC = () => {
         <div className="nav-brand">
           <h2>TecEx Medical</h2>
         </div>
-        
+
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
-          <button onClick={() => scrollToSection('home')} className="nav-link">Home</button>
-          <button onClick={() => scrollToSection('services')} className="nav-link">Services</button>
-          <button onClick={() => scrollToSection('about')} className="nav-link">About</button>
-          <button onClick={() => scrollToSection('contact')} className="nav-link">Contact</button>
+          <ul>
+            <li>
+              <a
+                href="#home"
+                className="nav-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('home');
+                }}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services"
+                className="nav-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('services');
+                }}
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#about"
+                className="nav-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('about');
+                }}
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="nav-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('contact');
+                }}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
         </nav>
 
         <button className="menu-toggle" onClick={toggleMenu}>
