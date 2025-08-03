@@ -115,7 +115,14 @@ p {
 
 .nav {
   display: flex;
+}
+
+.nav ul {
+  display: flex;
   gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
@@ -483,9 +490,12 @@ p {
     left: 0;
     right: 0;
     background: white;
-    flex-direction: column;
     padding: 1rem;
     border-top: 1px solid #DDDDDD;
+  }
+
+  .nav ul {
+    flex-direction: column;
   }
 
   .nav-open {
